@@ -319,7 +319,7 @@ export default function App() {
               Curtai.online
             </span>
             <p className="text-white/40 font-body text-sm">
-              © 2026 Curtatchê Markting Digital. Todos os direitos reservados.
+              © 2026 Curtatchê Marketing Digital. Todos os direitos reservados.
             </p>
           </div>
 
