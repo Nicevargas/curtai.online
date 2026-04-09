@@ -57,18 +57,59 @@ export default function Home() {
   const processSteps = [
     {
       icon: Zap,
-      title: "Estratégia",
-      desc: "Análise profunda do seu nicho para criar um plano de conteúdo viral."
+      title: "Módulo 1: TikTok Shop do jeito certo",
+      desc: "Como o afiliado funciona na prática, cadastro passo a passo e escolha de produtos vencedores."
     },
     {
-      icon: Users,
-      title: "Conexão",
-      desc: "Unimos sua marca aos melhores criadores do ecossistema TikTokShop."
+      icon: Video,
+      title: "Módulo 2: Veo 3 do Zero",
+      desc: "A fórmula dos 6 elementos para criar prompts perfeitos, vozes nativas e sua primeira cena."
     },
     {
-      icon: BarChart3,
-      title: "Escala",
-      desc: "Otimização constante para maximizar o ROI e o volume de vendas."
+      icon: MessageSquare,
+      title: "Módulo 3: Script que Para o Scroll",
+      desc: "Estrutura Hook-Story-Offer e uso de IA para escrever roteiros virais em 9 minutos."
+    },
+    {
+      icon: Rocket,
+      title: "Módulo 4: Do Vídeo ao TikTok em 60 min",
+      desc: "Edição rápida no CapCut, legendas dinâmicas e publicação otimizada."
+    },
+    {
+      icon: TrendingUp,
+      title: "Módulo 5: Escalar as Comissões",
+      desc: "Análise de métricas, rotina de escala e case real de R$0 a R$5.000/mês."
+    }
+  ];
+
+  const faqs = [
+    {
+      q: "Preciso aparecer na câmera?",
+      a: "Não. Você cria um personagem no Veo 3 — com rosto, voz em português e expressões reais. Ninguém sabe que é IA. O maior desafio técnico é manter o mesmo personagem consistente entre as cenas do vídeo, e o Módulo 2 resolve isso de forma bem direta."
+    },
+    {
+      q: "Não sei editar vídeo, consigo fazer?",
+      a: "Sim. A edição que o curso ensina é no CapCut — você aprende a montar um vídeo completo em menos de 15 minutos, sem precisar saber nada antes. A parte que exige mais atenção não é a edição, é escrever um script com gancho certo. E isso tem um método específico no Módulo 3."
+    },
+    {
+      q: "Quanto tempo leva para fazer um vídeo?",
+      a: "Após aprender o método, você consegue ir do produto ao vídeo publicado em menos de 60 minutos. O Módulo 4 é dedicado a esse fluxo inteiro — geração, edição, legenda, checklist e upload com o produto linkado."
+    },
+    {
+      q: "Já sou afiliado mas minhas comissões são inconsistentes, o curso ajuda?",
+      a: "Exatamente para isso o curso foi feito. Comissão inconsistente quase sempre é problema de volume e de conversão do vídeo — e os dois têm solução direta aqui. O Módulo 5 mostra como montar uma rotina de 3 vídeos por dia e como ler os dados para dobrar o que está funcionando."
+    },
+    {
+      q: "Funciona para qualquer nicho?",
+      a: "A maioria dos nichos funciona bem. Beleza, fitness, casa e tech são os mais fortes no TikTok Shop hoje. O que muda é o tom do script e o perfil do personagem — e o Módulo 1 ajuda a escolher um nicho com potencial real antes de você começar a produzir."
+    },
+    {
+      q: "O Veo 3 é complicado?",
+      a: "A interface é simples. O que faz diferença é saber construir o prompt certo — um prompt mal estruturado gera cenas genéricas que ninguém acredita. No Módulo 2 tem uma fórmula com 6 elementos que resolve isso, e a aula prática te faz gerar a primeira cena ainda durante o curso."
+    },
+    {
+      q: "Em quanto tempo vejo resultado?",
+      a: "É realista ter as primeiras comissões chegando ainda no primeiro mês, dependendo de frequência e do produto escolhido. O case documentado no Módulo 5 mostra o caminho real de 90 dias — com prints de analytics e números de cada fase."
     }
   ];
 
@@ -85,13 +126,17 @@ export default function Home() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-8 items-center">
-            {["Treinamento", "Cases", "Processo"].map((item) => (
+            {[
+              { name: "Conteúdo", href: "#conteudo" },
+              { name: "Performance", href: "#performance" },
+              { name: "Dúvidas Frequentes", href: "#duvidas" }
+            ].map((item) => (
               <a 
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`} 
+                key={item.name}
+                href={item.href} 
                 className="text-white/70 hover:text-white transition-colors font-headline text-sm tracking-tight"
               >
-                {item}
+                {item.name}
               </a>
             ))}
             <a 
@@ -120,14 +165,18 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-surface border-b border-white/10 px-6 py-8 flex flex-col gap-6"
           >
-            {["Treinamento", "Cases", "Processo"].map((item) => (
+            {[
+              { name: "Conteúdo", href: "#conteudo" },
+              { name: "Performance", href: "#performance" },
+              { name: "Dúvidas Frequentes", href: "#duvidas" }
+            ].map((item) => (
               <a 
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`} 
+                key={item.name}
+                href={item.href} 
                 className="text-white/70 hover:text-white font-headline text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item}
+                {item.name}
               </a>
             ))}
             <a 
@@ -245,20 +294,20 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="processo" className="py-20 md:py-32 px-6 md:px-12 bg-surface">
+      <section id="conteudo" className="py-20 md:py-32 px-6 md:px-12 bg-surface">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-headline font-black text-white mb-4 md:mb-6">Nosso Processo</h2>
-            <p className="text-white/50 text-sm md:text-base max-w-2xl mx-auto">Como transformamos visualizações em faturamento real para sua marca.</p>
+            <h2 className="text-3xl md:text-5xl font-headline font-black text-white mb-4 md:mb-6">O que você vai estudar</h2>
+            <p className="text-white/50 text-sm md:text-base max-w-2xl mx-auto">Conheça os 5 módulos práticos que vão te levar do zero às comissões diárias.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {processSteps.map((step, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
+                transition={{ delay: idx * 0.1 }}
                 className="relative p-6 md:p-8 rounded-2xl bg-surface-container-low border border-white/5 hover:border-primary/20 transition-all group"
               >
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-primary/20 transition-colors">
@@ -273,8 +322,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="duvidas" className="py-20 md:py-32 px-6 md:px-12 bg-surface">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-headline font-black text-white mb-6">Dúvidas Frequentes</h2>
+            <p className="text-white/50">Tudo o que você precisa saber antes de começar.</p>
+          </div>
+          <div className="space-y-6">
+            {faqs.map((faq, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-6 md:p-8 rounded-2xl bg-surface-container-low border border-white/5"
+              >
+                <h4 className="text-lg md:text-xl font-headline font-bold text-white mb-3">{faq.q}</h4>
+                <p className="text-white/50 text-sm md:text-base leading-relaxed">{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-16 text-center">
+            <motion.a
+              href="https://sistema-curso-online-git-main-nicevargas-projects.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-tertiary text-surface px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform inline-block"
+            >
+              Quero começar agora
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-surface-container-lowest overflow-hidden">
+      <section id="performance" className="py-20 md:py-32 px-6 md:px-12 bg-surface-container-lowest overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 md:gap-20 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
