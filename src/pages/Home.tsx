@@ -140,7 +140,7 @@ export default function Home() {
               </a>
             ))}
             <a 
-              href="https://sistema-curso-online-git-main-nicevargas-projects.vercel.app/"
+              href="https://sistema-curtai-online.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-container text-white px-6 py-2 rounded-lg font-bold hover:scale-105 transition-transform duration-300 active:scale-95 inline-block"
@@ -180,7 +180,7 @@ export default function Home() {
               </a>
             ))}
             <a 
-              href="https://sistema-curso-online-git-main-nicevargas-projects.vercel.app/"
+              href="https://sistema-curtai-online.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-container text-white py-3 rounded-lg font-bold text-center"
@@ -218,7 +218,7 @@ export default function Home() {
           </motion.p>
           <motion.div variants={itemVariants} className="mt-8 md:mt-10">
             <motion.a
-              href="https://sistema-curso-online-git-main-nicevargas-projects.vercel.app/"
+              href="https://sistema-curtai-online.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               animate={{ 
@@ -282,7 +282,7 @@ export default function Home() {
               </div>
             </div>
             <a 
-              href="https://sistema-curso-online-git-main-nicevargas-projects.vercel.app/"
+              href="https://sistema-curtai-online.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-tertiary text-surface py-3 md:py-4 px-6 md:px-8 rounded-xl font-bold text-base md:text-lg hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(241,193,16,0.4)] active:scale-95 transition-all w-full"
@@ -346,7 +346,7 @@ export default function Home() {
           </div>
           <div className="mt-16 text-center">
             <motion.a
-              href="https://sistema-curso-online-git-main-nicevargas-projects.vercel.app/"
+              href="https://sistema-curtai-online.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-tertiary text-surface px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform inline-block"
