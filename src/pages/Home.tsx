@@ -218,7 +218,7 @@ export default function Home() {
           </motion.p>
           <motion.div variants={itemVariants} className="mt-8 md:mt-10">
             <motion.a
-              href="https://sistema-curtai-online.vercel.app/"
+              href="https://sistema-curtai-online.vercel.app/cadastro"
               target="_blank"
               rel="noopener noreferrer"
               animate={{ 
